@@ -19,7 +19,7 @@ if __name__ == '__main__':
       --rm \
       oh-distro-dependencies \
       {command}\
-    """.format(source_dir=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."),
+    """.format(source_dir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "oh-distro"),
                command=command)
     print("command:", cmd)
     os.system(cmd)

@@ -83,3 +83,13 @@ RUN wget https://github.com/lcm-proj/lcm/releases/download/v1.3.1/lcm-1.3.1.zip 
 	./configure && \
 	make && \ 
 	make install 
+	
+ARG USER_NAME
+ARG USER_ID
+ARG USER_GID
+
+RUN useradd -ms /bin/bash $USER_NAME
+RUN usermod -u $USER_ID $USER_NAME
+RUN groupmod -g $USER_GID $USER_NAME
+
+USER $USER_NAME

@@ -1,0 +1,3 @@
+[submodule "oh-distro"]
+	path = oh-distro
+	url = git@github.com:RobotLocomotion/valkyrie.git
